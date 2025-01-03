@@ -4,7 +4,10 @@ import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-const SERVER_URL = process.env.REACT_SERVER_URL
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
+
+console.log(SERVER_URL);
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -28,7 +31,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch(SERVER_URL, {
+    let response = await fetch(`${SERVER_URL}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

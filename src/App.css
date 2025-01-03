@@ -75,11 +75,19 @@ input:focus, textarea:focus, select:focus {
 }
 
 p.success {
-	color: green;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgb(3, 219, 3);
+	color: rgb(2, 85, 2);
 }
 
 p.danger {
-	color: red;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgb(207, 62, 62);
+	color: rgb(167, 1, 1);
 }
 /************ Navbar Css ************/
 nav.navbar {

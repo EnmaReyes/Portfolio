@@ -6,9 +6,6 @@ import TrackVisibility from 'react-on-screen';
 
 const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
-
-console.log(SERVER_URL);
-
 export const Contact = () => {
   const formInitialDetails = {
     firstName: '',
@@ -31,6 +28,11 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
+    if (!formDetails.email?.trim() || !formDetails.message?.trim() || !formDetails.firstName?.trim()) {
+      setStatus({ success: false, message: 'Something went wrong, please fill out the form.' });
+      setButtonText("Send");
+      return;
+    }
     let response = await fetch(`${SERVER_URL}/contact`, {
       method: "POST",
       headers: {

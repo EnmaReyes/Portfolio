@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "src/build")));
 app.use("/", router);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "src/build", "index.js"));
+  res.sendFile(path.join(__dirname, "src/build", "index.html"));
 });
 
 app.listen(PORT, () => console.log("Server Running"));

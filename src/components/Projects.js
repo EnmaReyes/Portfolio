@@ -6,6 +6,9 @@ import projARReg from "../assets/img/project-AR-register.png";
 import projByGio from "../assets/img/project-bygio.png";
 import projByGioLogin from "../assets/img/project-bygio-login.png";
 import projByGioReg from "../assets/img/project-bygio-register.png";
+import projRecord from "../assets/img/record-init.png";
+import projRecordPrices from "../assets/img/record-prices.png";
+import projRecordRates from "../assets/img/record-rates.png";
 import RyM from "../assets/img/RyM.png";
 import RaveM from "../assets/img/ravemotion.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -49,6 +52,24 @@ export const Projects = () => {
       description: "Design & Development",
       imgUrl: projByGioReg,
       href: "https://bygio.onrender.com/register",
+    },
+    {
+      title: "Record",
+      description: "Design & Development",
+      imgUrl: projRecord,
+      href: "https://record-fawn.vercel.app/",
+    },
+    {
+      title: "Record Prices",
+      description: "Design & Development",
+      imgUrl: projRecordPrices,
+      href: "https://record-fawn.vercel.app/#prices/",
+    },
+     {
+      title: "Record Rates",
+      description: "Design & Development",
+      imgUrl: projRecordRates,
+      href: "https://record-fawn.vercel.app/#rates/",
     },
   ];
   const courseProjects = [
